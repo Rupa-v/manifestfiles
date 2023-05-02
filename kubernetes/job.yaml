@@ -7,7 +7,7 @@ spec:
     metadata:
       name: jobtemp
     spec:
-      restartPolicy: "Never"
+      restartPolicy: "Always"
       containers:
         - image: httpd:latest
           name: httpdjob
