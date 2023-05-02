@@ -4,7 +4,7 @@ kind: Pod
 metadata: 
   name: alpine
 spec:
-  container: 
+  containers: 
     - name: alpine
       image: alpine:latest
       args: 
