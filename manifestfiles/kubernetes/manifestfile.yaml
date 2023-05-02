@@ -1,16 +1,13 @@
 ---
 apiVersion: v1
-kind: Pod
-metadata:
-  name: nodeselector
-  labels:
-    app: nginx
-    purpose: nodeselector
+kind: pod
+metadata: 
+  name: alpine
 spec:
-  nodeSelector:
-    purpose: testing
-  containers:
-    - name: jenkins
-      image: jenkins/jenkins:jdk11
-      ports:
-        - containerPort: 8080
+  container: 
+    - name: alpine
+      image: alpine:latest
+      args: 
+        - sleep
+          10s
+       
