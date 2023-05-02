@@ -7,7 +7,7 @@ spec:
     metadata:
       name: jobtemp
     spec:
-      restartPolicy: never
+      restartPolicy: "Never"
       containers:
         - image: alpine:latest
           name: alpinejob
