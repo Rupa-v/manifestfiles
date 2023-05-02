@@ -7,6 +7,8 @@ spec:
   container: 
     - name: alpine
       image: alpine:latest
+      port:
+        - containerPorts: 8080
       args: 
         - sleep
           10s
