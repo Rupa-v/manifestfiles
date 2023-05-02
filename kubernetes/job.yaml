@@ -2,11 +2,12 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: hellojob
-spec: 
+spec:
   template: 
     metadata:
       name: jobtemp
     spec:
+    restartPolicy: never
       containers:
         - image: alpine:latest
           name: alpinejob
