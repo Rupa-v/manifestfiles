@@ -9,8 +9,8 @@ spec:
     spec:
       restartPolicy: "Never"
       containers:
-        - image: httpd:latest
-          name: httpdjob
+        - image: alpine:latest
+          name: alpinejob
           command: 
             - sleep
             - 1d
