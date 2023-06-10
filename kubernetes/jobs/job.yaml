@@ -1,0 +1,17 @@
+---
+apiVersion: batch/v1
+kind: job
+metadata: 
+  name: hello job
+spec: 
+  template: 
+    metadata: 
+      name: jobtemplete
+    spec: 
+      containers: 
+        - image: alpine:latest
+          name: alpinejob
+          commands:
+            - sleep
+            - 1d
+      restartPolicy: "Never"      

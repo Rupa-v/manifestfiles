@@ -1,0 +1,23 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata: 
+  name: periodic job
+spec: 
+  schedule: '* * * * *'
+  jobTemplate: 
+    metadata:
+      name: cronjob1
+    spec:
+      backoffLimit: 2
+      restartPolicy: OnFailure
+      template: 
+        metadata:
+          name: cronjobtemp
+        spec: 
+          containers:
+            - name: alpine
+              image: alpine:latest
+              commands:
+                - sleep
+                - 3s 
